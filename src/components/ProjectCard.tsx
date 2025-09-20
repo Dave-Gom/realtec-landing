@@ -25,15 +25,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       {...containerProps}
-      className={`relative rounded-2xl overflow-hidden shadow-md cursor-pointer ${
-        containerProps?.className ?? ""
-      }`}
+      className={`relative w-[461px] h-[576px] rounded-[20px] overflow-hidden `}
     >
       {/* Imagen de fondo */}
       <img
         src={imageUrl}
         alt={title}
-        className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+        className="block  w-[461px] h-[576px] object-cover transition-transform duration-300 hover:scale-105 "
       />
 
       {/* Overlay con texto */}
