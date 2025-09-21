@@ -53,7 +53,11 @@ const Carousel = <T extends object>({
     return (
       data.length > 1 &&
       !continuousScroll &&
-      scrollValues.scrollWidth > scrollValues.clientWidth
+      scrollValues.scrollWidth > scrollValues.clientWidth &&
+      !(
+        scrollValues.scrollLeft + scrollValues.clientWidth >=
+        scrollValues.scrollWidth
+      )
     );
   }, [data.length, continuousScroll, scrollValues]);
 
