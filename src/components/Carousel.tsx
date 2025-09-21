@@ -81,8 +81,6 @@ const Carousel = <T extends object>({
     }
   };
 
-  console.log(showRightButton);
-
   return (
     <div
       className={`w-full overflow-hidden relative flex justify-center align-middle`}
