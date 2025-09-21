@@ -15,7 +15,7 @@ const rubik = Rubik({
 
 const Introduction = () => {
   return (
-    <div className="h-[80vh] w-full bg-white flex flex-row  items-center px-[10rem] justify-between gap-20 ">
+    <div className="h-[80vh] w-full bg-white flex flex-row  items-center px-[10rem] justify-between gap-20">
       <div>
         <h2
           className={`text-[32px] font-bold mb-6 text-[#22AF52]  ${sora.className}`}

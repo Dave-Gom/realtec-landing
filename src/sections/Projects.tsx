@@ -26,16 +26,13 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="p-4 w-full min-h-[80vh] bg-white">
-      <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
+    <section className="p-4 w-full min-h-[80vh] bg-white" id="projects">
+      <h2 className="text-3xl font-bold text-center text-[#22AF52] mb-6">
         Nuestros Proyectos
       </h2>
       <Carousel
         data={projects}
-        autoPlay={false}
-        fullViewItem={false} // Enable multi-item view like FlatList
-        continuousScroll={true} // Enable smooth dragging
-        className="rounded-xl"
+        gap={"1rem"}
         renderItem={(project, index) => {
           return (
             <ProjectCard

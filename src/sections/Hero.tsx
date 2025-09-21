@@ -8,7 +8,10 @@ const sora = Sora({
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      id="start"
+    >
       {/* Video de fondo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
