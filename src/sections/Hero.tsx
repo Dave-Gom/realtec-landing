@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       className="relative h-screen w-full flex items-center justify-center overflow-hidden"
-      id="start"
+      id="hero"
     >
       {/* Video de fondo */}
       <video

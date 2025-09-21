@@ -43,8 +43,6 @@ const Carousel = <T extends object>({
     scrollableRef.current?.addEventListener("scroll", updateScrollValues);
   }, []);
 
-  console.log(scrollValues);
-
   const showLeftButton = useMemo(() => {
     return data.length > 1 && !continuousScroll && scrollValues.scrollLeft > 0;
   }, [data.length, continuousScroll, scrollValues]);
