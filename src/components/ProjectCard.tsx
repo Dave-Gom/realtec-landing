@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       {...containerProps}
-      className={`relative w-[461px] h-[576px] rounded-[20px] overflow-hidden `}
+      className={`relative min-w-[461px] min-h-[576px] rounded-[20px] overflow-hidden `}
     >
       {/* Imagen de fondo */}
       <img
