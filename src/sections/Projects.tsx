@@ -26,8 +26,11 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="p-4 w-full min-h-[80vh] bg-white" id="projects">
-      <h2 className="text-3xl font-bold text-center text-[#22AF52] mb-6">
+    <section
+      className="p-4 w-full min-h-[80vh] bg-white flex flex-col align-middle justify-center"
+      id="projects"
+    >
+      <h2 className="text-[48px] font-bold text-center text-[#22AF52] mb-6">
         Nuestros Proyectos
       </h2>
       <Carousel

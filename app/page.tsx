@@ -1,3 +1,4 @@
+import ChoseUs from "@/src/sections/ChoseUs";
 import Counter from "@/src/sections/Counter";
 import Hero from "@/src/sections/Hero";
 import Introduction from "@/src/sections/Introduction";
@@ -11,6 +12,7 @@ export default function Home() {
         <Introduction />
         <Counter />
         <Projects />
+        <ChoseUs />
       </main>
     </div>
   );
