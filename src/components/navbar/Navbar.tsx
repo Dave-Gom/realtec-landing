@@ -1,5 +1,7 @@
+"use client";
 import { Rubik } from "next/font/google";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -8,11 +10,43 @@ const rubik = Rubik({
 });
 
 const selectedBackground =
-  "border-2 border-green-500 bg-[#22AF52] text-white rounded-full shadow-md transition";
+  "bg-[#22AF52] text-white rounded-full shadow-md transition";
+
+const sections = ["hero", "projects", "us", "contact"];
 
 const Navbar = () => {
+  const [active, setActive] = useState("hero");
+
+  console.log(active);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActive(id);
+              }
+            });
+          },
+          { threshold: 0.6 } // 60% visible para marcar activo
+        );
+        observer.observe(section);
+        observers.push(observer);
+      }
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   return (
-    <nav className="fixed flex bg-white px-15 py-7  left-0 right-0 top-0 z-100 w-auto items-center">
+    <nav className="fixed flex bg-white px-15 py-7 left-0 right-0 top-0 z-100 w-auto items-center">
       <span>
         <Image
           src="/assets/img/realtec.png"
@@ -20,34 +54,23 @@ const Navbar = () => {
           className="h-10"
           width={200}
           height={40}
-          objectFit="cover"
         />
       </span>
       <div className="flex flex-1"></div>
-      <a
-        href="#hero"
-        className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className} ${selectedBackground}  hover:bg-green-500 hover:border-[#22AF52]`}
-      >
-        INICIO
-      </a>
-      <a
-        href="#us"
-        className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className}`}
-      >
-        NOSOTROS
-      </a>
-      <a
-        href="#projects"
-        className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className}`}
-      >
-        PROYECTOS
-      </a>
-      <a
-        href="#contact"
-        className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className}`}
-      >
-        CONTÁCTANOS
-      </a>
+      {sections.map((id, index) => {
+        const labels = ["INICIO", "PROYECTOS", "NOSOTROS", "CONTÁCTANOS"];
+        return (
+          <a
+            key={id}
+            href={`#${id}`}
+            className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className} ${
+              active === id ? selectedBackground : ""
+            } hover:bg-[#22AF52] hover:rounded-full hover:text-white`}
+          >
+            {labels[index]}
+          </a>
+        );
+      })}
     </nav>
   );
 };
