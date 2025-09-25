@@ -1,7 +1,7 @@
 "use client";
 
+import ProjectCard from "../components/Cards/ProjectCard";
 import Carousel from "../components/Carousel";
-import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {

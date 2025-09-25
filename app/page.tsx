@@ -5,6 +5,7 @@ import Introduction from "@/src/sections/Introduction";
 import OurTeam from "@/src/sections/OurTeam";
 import Partners from "@/src/sections/Partners";
 import Projects from "@/src/sections/Projects";
+import Services from "@/src/sections/Services";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Projects />
         <ChoseUs />
         <OurTeam />
+        <Services />
         <Partners />
       </main>
     </div>

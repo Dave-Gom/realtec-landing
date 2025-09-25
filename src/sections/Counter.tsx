@@ -1,4 +1,4 @@
-import StatCard from "../components/StatCard";
+import StatCard from "../components/Cards/StatCard";
 
 const Counter = () => {
   return (
