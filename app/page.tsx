@@ -3,6 +3,7 @@ import Counter from "@/src/sections/Counter";
 import Hero from "@/src/sections/Hero";
 import Introduction from "@/src/sections/Introduction";
 import OurTeam from "@/src/sections/OurTeam";
+import Partners from "@/src/sections/Partners";
 import Projects from "@/src/sections/Projects";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <Projects />
         <ChoseUs />
         <OurTeam />
+        <Partners />
       </main>
     </div>
   );

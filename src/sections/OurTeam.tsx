@@ -1,5 +1,5 @@
 "use client";
-import { Inter, Rubik, Sora } from "next/font/google";
+import { Sora } from "next/font/google";
 import TeamMemberCard, {
   TeamMemberCardProps,
 } from "../components/Cards/TeamMemberCard";
@@ -9,18 +9,6 @@ const sora = Sora({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-sora",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-inter",
-});
-
-const rubik = Rubik({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-rubik",
 });
 
 const members: TeamMemberCardProps[] = [
