@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Video de fondo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        src="/assets/video/realtecHero.mp4"
+        src="/assets/video/realtecHeroV2.mp4"
         autoPlay
         loop
         muted
@@ -28,7 +28,10 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-black/10 z-10" />
 
       <div className="relative z-20 text-center text-white">
-        <h1 className={`text-[72px] font-bold mb-4 ${sora.className}`}>
+        <h1
+          className={`text-[72px] font-bold mb-4 ${sora.className} drop-shadow-lg`}
+          style={{ textShadow: "2px 2px 2px rgba(0, 0, 0, 0.8)" }}
+        >
           Desarrollamos valor,
           <br /> crecemos juntos
         </h1>
