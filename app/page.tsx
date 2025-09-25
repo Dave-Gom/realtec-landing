@@ -1,4 +1,5 @@
 import ChoseUs from "@/src/sections/ChoseUs";
+import Contact from "@/src/sections/Contact";
 import Counter from "@/src/sections/Counter";
 import Hero from "@/src/sections/Hero";
 import Introduction from "@/src/sections/Introduction";
@@ -19,6 +20,7 @@ export default function Home() {
         <OurTeam />
         <Services />
         <Partners />
+        <Contact />
       </main>
     </div>
   );
