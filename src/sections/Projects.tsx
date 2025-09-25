@@ -27,7 +27,7 @@ const projects = [
 const Projects = () => {
   return (
     <section
-      className="p-4 w-full min-h-[80vh] bg-white flex flex-col align-middle justify-center"
+      className="p-4 w-full min-h-[80vh] bg-white flex flex-col align-middle justify-center scroll-mt-[10vh]"
       id="projects"
     >
       <h2 className="text-[48px] font-bold text-center text-[#22AF52] mb-6">

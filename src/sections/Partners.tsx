@@ -9,7 +9,7 @@ const sora = Sora({
 const Partners = () => {
   return (
     <section
-      className="p-4 pt-20 w-full min-h-[40vh] bg-white flex flex-col align-middle overflow-hidden"
+      className="p-4 pt-20 w-full min-h-[40vh] bg-white flex flex-col align-middle overflow-hidden scroll-mt-[10vh]"
       id="partners"
     >
       <h2

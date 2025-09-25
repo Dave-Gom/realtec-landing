@@ -5,7 +5,7 @@ import { inter, sora } from "../theme/fonts";
 const Contact = () => {
   return (
     <section
-      className="w-full h-screen flex flex-row items-center justify-center bg-[#22AF52] gap-20"
+      className="w-full h-screen flex flex-row items-center justify-center bg-[#22AF52] gap-20 scroll-mt-[10vh]"
       id="contact"
     >
       <div className="flex flex-col  w-[40vw]  gap-6 max-w-2xl text-center px-4">

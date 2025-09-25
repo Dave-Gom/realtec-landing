@@ -15,7 +15,7 @@ const redHatDisplay = Red_Hat_Display({
 const ChoseUs = () => {
   return (
     <section
-      className="w-full h-screen flex flex-col items-center justify-center bg-[#194230] gap-8"
+      className="w-full h-screen flex flex-col items-center justify-center bg-[#194230] gap-8 scroll-mt-[10vh]"
       id="chose-us"
     >
       <div className="flex flex-row items-center text-white px-5 text-center gap-8">

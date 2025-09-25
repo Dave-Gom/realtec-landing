@@ -29,7 +29,7 @@ const servicesList: IconCardProps[] = [
 const Services = () => {
   return (
     <section
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden scroll-mt-[10vh]"
       id="hero"
     >
       {/* Video de fondo */}

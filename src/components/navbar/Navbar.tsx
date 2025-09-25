@@ -9,8 +9,7 @@ const rubik = Rubik({
   variable: "--font-rubik",
 });
 
-const selectedBackground =
-  "bg-[#22AF52] text-white rounded-full shadow-md transition";
+const selectedBackground = "bg-[#22AF52] text-white rounded-full transition";
 
 const sections = ["hero", "projects", "us", "contact"];
 
@@ -46,7 +45,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed flex bg-white px-15 py-7 left-0 right-0 top-0 z-100 w-auto items-center">
+    <nav className="fixed flex bg-white px-15 py-7 left-0 right-0 top-0 z-100 w-auto items-center h-10vh">
       <span>
         <Image
           src="/assets/img/realtec.png"
