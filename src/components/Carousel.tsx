@@ -9,7 +9,9 @@ type CarouselProps<T extends object> = {
   fullViewItem?: boolean;
   gap?: Property.Gap;
   className?: HTMLAttributes<HTMLDivElement>["className"];
+  contentContainerClassName?: HTMLAttributes<HTMLDivElement>["className"];
   containerProps?: React.HTMLAttributes<HTMLDivElement>;
+  contenContainerProps?: React.HTMLAttributes<HTMLDivElement>;
   showContentIndicators?: boolean;
 };
 
@@ -18,6 +20,10 @@ const Carousel = <T extends object>({
   renderItem,
   continuousScroll,
   gap,
+  className,
+  containerProps,
+  contenContainerProps,
+  contentContainerClassName,
 }: CarouselProps<T>) => {
   const scrollableRef = useRef<HTMLDivElement | null>(null);
   const [scrollValues, setScrollValues] = useState({
@@ -81,11 +87,15 @@ const Carousel = <T extends object>({
 
   return (
     <div
-      className={`w-full overflow-hidden relative flex justify-center align-middle`}
+      {...containerProps}
+      className={`w-full overflow-hidden relative flex justify-center align-middle ${
+        className ?? ""
+      }`}
     >
       <div
         ref={scrollableRef}
-        className="overflow-x-auto grid grid-flow-col auto-cols-max scrollbar-hide"
+        {...contenContainerProps}
+        className={`overflow-x-auto grid grid-flow-col auto-cols-max scrollbar-hide ${contentContainerClassName}`}
         style={{
           gap,
           scrollbarWidth: "none", // Firefox

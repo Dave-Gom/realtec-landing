@@ -31,7 +31,7 @@ const Navbar = () => {
         INICIO
       </a>
       <a
-        href="#about"
+        href="#us"
         className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className}`}
       >
         NOSOTROS
