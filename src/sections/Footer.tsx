@@ -15,8 +15,46 @@ const Footer = () => {
           height={120}
           className="object-cover w-[200px] h-auto "
         />
-        <div className="flex flex-row gap-6 text-[#22AF52] text-lg font-medium">
-          instagram
+        <div className="flex flex-row gap-12 text-[#22AF52] text-lg font-medium">
+          <a
+            href="https://www.instagram.com/realtecpy?igsh=NXB5eGprZ2c5ejNu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/img/icons/instagram.png"
+              alt="footer"
+              width={51}
+              height={51}
+              className="object-cover w-[51] h-auto "
+            />
+          </a>
+          <a
+            href="https://web.facebook.com/profile.php?id=61579405306643"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/img/icons/facebook.png"
+              alt="footer"
+              width={51}
+              height={51}
+              className="object-cover w-[51] h-auto "
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/feed/update/urn:li:activity:7366937633614180354"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/img/icons/linkedIn.png"
+              alt="footer"
+              width={51}
+              height={51}
+              className="object-cover w-[51] h-auto "
+            />
+          </a>
         </div>
       </div>
       <line className="border-1 border-[#22AF52] w-[80vw] mt-4" />
