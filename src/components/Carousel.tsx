@@ -100,7 +100,10 @@ const Carousel = <T extends object>({
           gap,
           scrollbarWidth: "none", // Firefox
           msOverflowStyle: "none", // IE y Edge antiguo
-          pointerEvents: continuousScroll ? "auto" : "none",
+          pointerEvents:
+            continuousScroll && !showRightButton && !showLeftButton
+              ? "auto"
+              : "none",
         }}
       >
         {data.map(renderItem)}
