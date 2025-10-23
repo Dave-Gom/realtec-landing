@@ -3,7 +3,7 @@ import { sora } from "../theme/fonts";
 
 const Footer = () => {
   return (
-    <section
+    <footer
       className="w-full h-[30vh] bg-white flex flex-col justify-center items-center"
       id="partners"
     >
@@ -63,7 +63,7 @@ const Footer = () => {
       >
         © 2025. Studio M. All rights reserved.
       </h2>
-    </section>
+    </footer>
   );
 };
 
