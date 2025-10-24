@@ -27,17 +27,19 @@ const projects = [
 const Projects = () => {
   return (
     <section
-      className="p-4 w-full min-h-[80vh] bg-white flex flex-col align-middle justify-center scroll-mt-[10vh] pb-16"
       id="projects"
+      className="w-full min-h-[80vh] bg-white flex flex-col justify-center items-center  sm:pb-12 py-20 scroll-mt-[10vh]"
     >
-      <h2 className="text-[48px] font-bold text-center text-[#22AF52] mb-6">
+      <h2 className="text-[28px] sm:text-[36px] md:text-[48px] font-bold text-center text-[#22AF52] mb-8 md:mb-12">
         Nuestros Proyectos
       </h2>
-      <Carousel
-        data={projects}
-        gap={"1rem"}
-        renderItem={(project, index) => {
-          return (
+      {/* Carousel responsivo */}
+      <div className="w-full max-w-[1400px]">
+        <Carousel
+          data={projects}
+          gap={"1rem"}
+          contentContainerClassName="px-10 md:px-20"
+          renderItem={(project, index) => (
             <ProjectCard
               key={project.title + index}
               imageUrl={project.imageUrl}
@@ -45,9 +47,9 @@ const Projects = () => {
               location={project.location}
               status={project.status}
             />
-          );
-        }}
-      />
+          )}
+        />
+      </div>
     </section>
   );
 };

@@ -9,7 +9,7 @@ const sora = Sora({
 const Hero = () => {
   return (
     <section
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative h-screen w-screen flex items-center justify-center overflow-hidden"
       id="hero"
     >
       {/* Video de fondo */}
@@ -29,8 +29,7 @@ const Hero = () => {
 
       <div className="relative z-20 text-center text-white">
         <h1
-          className={`text-[72px] font-bold mb-4 ${sora.className} drop-shadow-lg`}
-          style={{ textShadow: "2px 2px 2px rgba(0, 0, 0, 0.8)" }}
+          className={`text-[36px] md:text-[60px] lg:text-[72px] font-bold mb-4 ${sora.className} drop-shadow-lg`}
         >
           Desarrollamos valor,
           <br /> crecemos juntos
