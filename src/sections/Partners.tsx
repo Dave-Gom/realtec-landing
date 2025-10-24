@@ -10,7 +10,7 @@ const Partners = () => {
   return (
     <section
       id="partners"
-      className="px-4 sm:px-8 lg:px-20 pt-16 sm:pt-20 w-full min-h-[40vh] bg-white flex flex-col items-center overflow-hidden scroll-mt-[10vh]"
+      className="px-4 sm:px-8 lg:px-20 pt-16 sm:pt-20 w-full min-h-[40vh] bg-white flex flex-col items-center overflow-hidden scroll-mt-[10vh] pb-12"
     >
       <h2
         className={`${sora.className} text-[28px] sm:text-[36px] lg:text-[48px] font-semibold text-center text-[#22AF52] mb-6 sm:mb-10`}

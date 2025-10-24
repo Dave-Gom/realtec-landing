@@ -26,13 +26,15 @@ const StatCard = ({
   return (
     <div
       {...containerProps}
-      className={`flex flex-col items-center justify-center p-4 text-white ${
+      className={`flex flex-col items-center justify-center p-4 text-white${
         containerProps?.className ?? ""
       }`}
     >
       <p
         {...primaryTextProps}
-        className={`${sora.className} text-[64px] font-semibold ${
+        className={`${
+          sora.className
+        } text-[32px] md:text-[48px] lg:text-[64px] font-semibold  sm:text-center  ${
           primaryTextProps?.className ?? ""
         }`}
       >
