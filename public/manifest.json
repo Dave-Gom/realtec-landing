@@ -1,0 +1,25 @@
+{
+  "name": "Realtec Paraguay - Desarrolladora Inmobiliaria",
+  "short_name": "Realtec",
+  "description": "Desarrolladora inmobiliaria especializada en proyectos industriales, corporativos y de uso mixto en Paraguay",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22AF52",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/img/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "real-estate", "construction"],
+  "lang": "es",
+  "dir": "ltr"
+}
