@@ -65,10 +65,10 @@ const Services = () => {
         {/* Cuadrícula de IconCards */}
         <div
           className="
-            grid grid-cols-1 md:grid-cols-2 
+            grid grid-cols-2 
             gap-6 sm:gap-10 
             mt-10 lg:mt-20 
-            w-full max-w-[900px] mx-auto px-4
+            w-full max-w-[900px] px-4
           "
         >
           {servicesList.map((service, index) => (
