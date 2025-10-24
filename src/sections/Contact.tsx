@@ -1,8 +1,22 @@
+"use client";
 import { Mail, MessageSquare, User } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 import { inter, sora } from "../theme/fonts";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSendEmail = () => {
+    const subject = encodeURIComponent(`Consulta de ${name}`);
+    const body = encodeURIComponent(
+      `Hola mi nombre es: ${name}\n\nMensaje:\n${message}`
+    );
+    window.location.href = `mailto:lucas.tecnoedil@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section
       id="contact"
@@ -23,6 +37,8 @@ const Contact = () => {
             <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#ACB4C3] w-5 h-5" />
             <input
               type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className={`w-full pl-12 pr-3 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white bg-[#E7EAEE] text-[#333] placeholder:text-[#ACB4C3] ${inter.className}`}
               placeholder="Nombre y Apellido"
             />
@@ -36,6 +52,8 @@ const Contact = () => {
             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#ACB4C3] w-5 h-5" />
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className={`w-full pl-12 pr-3 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white bg-[#E7EAEE] text-[#333] placeholder:text-[#ACB4C3] ${inter.className}`}
               placeholder="Ingresa tu email"
             />
@@ -48,6 +66,8 @@ const Contact = () => {
           <div className="relative">
             <MessageSquare className="absolute left-3 top-4 text-[#ACB4C3] w-5 h-5" />
             <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className={`w-full pl-12 pr-3 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white bg-[#E7EAEE] text-[#333] placeholder:text-[#ACB4C3] ${inter.className}`}
               placeholder="Escribe tu mensaje"
               rows={4}
@@ -56,14 +76,16 @@ const Contact = () => {
         </label>
 
         {/* Botón */}
-        <button className="bg-white text-[#22AF52] font-semibold px-6 py-3 rounded-[88px] hover:bg-gray-200 transition">
+        <button
+          onClick={handleSendEmail}
+          className="bg-white text-[#22AF52] font-semibold px-6 py-3 rounded-[88px] hover:bg-gray-200 transition"
+        >
           Enviar consulta
         </button>
       </div>
 
       {/* Imagen decorativa */}
-      <div className="relative flex justify-center lg:justify-end  w-full lg:w-auto">
-        {/* Líneas decorativas solo visibles en pantallas grandes */}
+      <div className="relative flex justify-center lg:justify-end w-full lg:w-auto">
         <div className="w-10 h-30 border-1 border-[#F4F7FA] mt-80 rounded-[30px] mr-[-15] z-1" />
         <Image
           src="/assets/img/contact.jpg"
