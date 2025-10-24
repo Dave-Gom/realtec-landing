@@ -50,8 +50,9 @@ const Introduction = () => {
           alt="Introduction Image"
           width={500}
           height={500}
-          className="rounded-[30px] object-cover w-[90%] sm:w-[80%] md:w-[60%] lg:w-[500px] lg:h-[500px] border"
+          className="rounded-[30px] object-cover w-[90%] sm:w-[400px] lg:w-[500px] sm:h-[400px] lg:h-[500px] border border-[#F4F7FA] shadow-md"
         />
+
         <div className="w-40 h-10 border-1 border-[#22AF52] rounded-[30px] ml-[-170] mt-[-18]" />
       </div>
     </div>
