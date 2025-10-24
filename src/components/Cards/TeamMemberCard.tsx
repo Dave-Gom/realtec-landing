@@ -33,7 +33,7 @@ const TeamMemberCard = ({
 }: TeamMemberCardProps) => {
   return (
     <div
-      className={`relative w-[80vw] h-[65vh] md:w-[377px] md:h-[650px] lg:w-[377px] lg:h-[653px] rounded-[16px] flex flex-col border border-[#22AF52] p-6 gap-4 m-auto lg:mb-10 items-center text-center bg-white`}
+      className={`relative w-[80vw] h-[70vh] md:w-[377px] md:h-[650px] lg:w-[377px] lg:h-[653px] rounded-[16px] flex flex-col border border-[#22AF52] p-6 gap-4 m-auto lg:mb-10 items-center text-center bg-white`}
     >
       <img
         src={imageUrl}
