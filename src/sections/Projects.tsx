@@ -28,7 +28,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full min-h-[80vh] bg-white flex flex-col justify-center items-center  sm:pb-12 py-20 scroll-mt-[10vh]"
+      className="w-full min-h-[80vh] bg-white flex flex-col justify-center items-center  sm:pb-12 py-20 scroll-mt-[5vh]"
     >
       <h2 className="text-[28px] sm:text-[36px] md:text-[48px] font-bold text-center text-[#22AF52] mb-8 md:mb-12">
         Nuestros Proyectos
