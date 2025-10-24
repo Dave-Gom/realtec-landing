@@ -68,7 +68,7 @@ const OurTeam = () => {
         Team Realtec
       </h2>
       <Carousel
-        contentContainerClassName="px-40"
+        contentContainerClassName="px-10 md:px-20 lg:px-40"
         data={members}
         gap={"1rem"}
         continuousScroll
