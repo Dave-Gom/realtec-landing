@@ -64,7 +64,7 @@ const Contact = () => {
       {/* Imagen decorativa */}
       <div className="relative flex justify-center lg:justify-end items-center w-full lg:w-auto">
         {/* Líneas decorativas solo visibles en pantallas grandes */}
-        <div className="hidden lg:block absolute left-0 top-[60%] w-10 h-32 border border-[#F4F7FA] rounded-[30px] -translate-x-14 z-10" />
+        <div className="w-10 h-30 border-1 border-[#F4F7FA] mt-80 rounded-[30px] mr-[-15] z-1" />
         <Image
           src="/assets/img/contact.jpg"
           alt="Imagen de contacto"
@@ -72,7 +72,7 @@ const Contact = () => {
           height={500}
           className="rounded-[30px] object-cover w-[90%] sm:w-[400px] lg:w-[500px] h-auto border border-[#F4F7FA] shadow-md"
         />
-        <div className="hidden lg:block absolute bottom-[5%] right-[10%] w-40 h-10 border border-[#F4F7FA] rounded-[30px]" />
+        <div className="w-40 h-10 border-1 border-[#F4F7FA] rounded-[30px] ml-[-170] mt-[-18]" />
       </div>
     </section>
   );
