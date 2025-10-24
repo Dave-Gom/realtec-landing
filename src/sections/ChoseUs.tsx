@@ -23,7 +23,7 @@ const ChoseUs = () => {
       {/* Primera fila */}
       <div className="flex flex-col lg:flex-row items-center text-white gap-6 lg:gap-8 w-full max-w-[1300px]">
         {/* Izquierda */}
-        <div className="flex flex-col justify-center text-left bg-transparent rounded-3xl p-6 sm:p-8 lg:pr-20 lg:p-0 w-full lg:w-1/2">
+        <div className="flex flex-col justify-center text-left bg-transparent rounded-3xl p-6 sm:p-8 lg:pr-20 lg:p-0 w-full lg:w-1/2 lg:h-[18rem]">
           <h2
             className={`${sora.className} font-semibold text-[32px] sm:text-[40px] lg:text-[55px] text-[#F4F7FA] leading-tight mb-4`}
           >
@@ -40,7 +40,7 @@ const ChoseUs = () => {
         </div>
 
         {/* Derecha */}
-        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 h-auto flex flex-col justify-center w-full lg:w-1/2">
+        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 h-auto flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem]">
           <h3
             className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3`}
           >
@@ -62,7 +62,7 @@ const ChoseUs = () => {
       {/* Segunda fila */}
       <div className="flex flex-col lg:flex-row items-center text-white gap-6 lg:gap-8 w-full max-w-[1300px]">
         {/* Izquierda */}
-        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2">
+        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem]">
           <h3
             className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3`}
           >
@@ -80,7 +80,7 @@ const ChoseUs = () => {
         </div>
 
         {/* Derecha */}
-        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2">
+        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2  lg:h-[18rem]">
           <h3
             className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3`}
           >
