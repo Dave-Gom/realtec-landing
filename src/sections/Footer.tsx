@@ -4,65 +4,76 @@ import { sora } from "../theme/fonts";
 const Footer = () => {
   return (
     <footer
-      className="w-full h-[30vh] bg-white flex flex-col justify-center items-center"
-      id="partners"
+      id="footer"
+      className="w-full bg-white flex flex-col items-center justify-center py-10 px-6 sm:px-10 lg:px-[10vw]"
     >
-      <div className="flex flex-row justify-between items-center w-full  px-[10vw]">
+      {/* Contenedor principal */}
+      <div className="flex flex-col sm:flex-row justify-between items-center w-full gap-8">
+        {/* Logo */}
         <Image
           src="/assets/img/logoCompleto.png"
-          alt="footer"
+          alt="Realtec logo"
           width={400}
           height={120}
-          className="object-cover w-[200px] h-auto "
+          className="object-contain w-[180px] sm:w-[220px] lg:w-[260px] h-auto"
         />
-        <div className="flex flex-row gap-12 text-[#22AF52] text-lg font-medium">
+
+        {/* Redes sociales */}
+        <div className="flex flex-row gap-6 sm:gap-10 text-[#22AF52]">
           <a
             href="https://www.instagram.com/realtecpy?igsh=NXB5eGprZ2c5ejNu"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <Image
               src="/assets/img/icons/instagram.png"
-              alt="footer"
-              width={51}
-              height={51}
-              className="object-cover w-[51] h-auto "
+              alt="Instagram"
+              width={40}
+              height={40}
+              className="w-[32px] sm:w-[40px] lg:w-[50px] h-auto hover:scale-110 transition-transform duration-200"
             />
           </a>
           <a
             href="https://web.facebook.com/profile.php?id=61579405306643"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
             <Image
               src="/assets/img/icons/facebook.png"
-              alt="footer"
-              width={51}
-              height={51}
-              className="object-cover w-[51] h-auto "
+              alt="Facebook"
+              width={40}
+              height={40}
+              className="w-[32px] sm:w-[40px] lg:w-[50px] h-auto hover:scale-110 transition-transform duration-200"
             />
           </a>
           <a
             href="https://www.linkedin.com/feed/update/urn:li:activity:7366937633614180354"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <Image
               src="/assets/img/icons/linkedIn.png"
-              alt="footer"
-              width={51}
-              height={51}
-              className="object-cover w-[51] h-auto "
+              alt="LinkedIn"
+              width={40}
+              height={40}
+              className="w-[32px] sm:w-[40px] lg:w-[50px] h-auto hover:scale-110 transition-transform duration-200"
             />
           </a>
         </div>
       </div>
-      <line className="border-1 border-[#22AF52] w-[80vw] mt-4" />
-      <h2
-        className={`${sora.className} text-[24px] text-[#22AF52] font-semibold mt-4`}
+
+      {/* Línea divisoria */}
+      <div className="w-full max-w-[90vw] border-t border-[#22AF52] my-6" />
+
+      {/* Texto de derechos */}
+      <p
+        className={`${sora.className} text-center text-[#22AF52] text-[14px] sm:text-[16px] font-semibold`}
       >
         © 2025. Studio M. All rights reserved.
-      </h2>
+      </p>
     </footer>
   );
 };
