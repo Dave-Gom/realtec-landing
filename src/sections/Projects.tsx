@@ -28,28 +28,27 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full min-h-[80vh] bg-white flex flex-col justify-center items-center  sm:pb-12 py-20 scroll-mt-[5vh]"
+      className=" py-10 w-full min-h-[80vh] bg-white flex flex-col align-middle overflow-hidden scroll-mt-[5vh]"
     >
       <h2 className="text-[28px] sm:text-[36px] md:text-[48px] font-bold text-center text-[#22AF52] mb-8 md:mb-12">
         Nuestros Proyectos
       </h2>
       {/* Carousel responsivo */}
-      <div className="w-full max-w-[1400px]">
-        <Carousel
-          data={projects}
-          gap={"1rem"}
-          contentContainerClassName="px-10 md:px-20"
-          renderItem={(project, index) => (
-            <ProjectCard
-              key={project.title + index}
-              imageUrl={project.imageUrl}
-              title={project.title}
-              location={project.location}
-              status={project.status}
-            />
-          )}
-        />
-      </div>
+
+      <Carousel
+        data={projects}
+        gap={"1rem"}
+        contentContainerClassName="px-10 md:px-20 lg:px-40"
+        renderItem={(project, index) => (
+          <ProjectCard
+            key={project.title + index}
+            imageUrl={project.imageUrl}
+            title={project.title}
+            location={project.location}
+            status={project.status}
+          />
+        )}
+      />
     </section>
   );
 };
