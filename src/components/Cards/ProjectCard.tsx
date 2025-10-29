@@ -32,13 +32,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       {...containerProps}
-      className={`relative  w-[80vw] h-[55vh] lg:w-[361px] md:w-[300px] lg:h-[516px]  rounded-[20px] overflow-hidden`}
+      className={`relative  w-[80vw] h-[100vw] lg:w-[361px] md:w-[300px] lg:h-[516px]  rounded-[20px] overflow-hidden`}
     >
       {/* Imagen de fondo */}
       <img
         src={imageUrl}
         alt={title}
-        className="block w-[80vw] h-[55vh] lg:w-[461px] md:w-[350px] lg:h-[576px] object-cover transition-transform duration-300 hover:scale-105 "
+        className="block w-[80vw] h-[100vw] lg:w-[461px] md:w-[350px] lg:h-[576px] object-cover transition-transform duration-300 hover:scale-105 "
       />
 
       {/* Overlay con texto */}
