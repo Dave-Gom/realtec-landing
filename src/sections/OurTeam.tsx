@@ -59,7 +59,7 @@ const members: TeamMemberCardProps[] = [
 const OurTeam = () => {
   return (
     <section
-      className=" py-10 w-full min-h-[80vh] bg-white flex flex-col align-middle overflow-hidden scroll-mt-[5vh]"
+      className=" py-10 w-full min-h-[80vh] bg-white flex flex-col align-middle overflow-hidden scroll-mt-[10vh]"
       id="us"
     >
       <h2

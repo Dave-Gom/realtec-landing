@@ -46,7 +46,7 @@ const Introduction = () => {
         <div className="w-10 h-30 border-1 border-[#22AF52] mt-80 rounded-[30px] mr-[-15] z-1" />
 
         <Image
-          src="/assets/img/intoImage.jpg"
+          src="/assets/img/intro/introImage.jpg"
           alt="Introduction Image"
           width={500}
           height={500}

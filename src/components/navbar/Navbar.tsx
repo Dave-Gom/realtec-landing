@@ -49,7 +49,7 @@ const Navbar = () => {
       {/* Logo */}
       <span>
         <Image
-          src="/assets/img/realtec.png"
+          src="/assets/img/navbar/realtec.png"
           alt="Logo"
           className="h-10"
           width={200}

@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="flex flex-col sm:flex-row justify-between items-center w-full gap-8">
         {/* Logo */}
         <Image
-          src="/assets/img/logoCompleto.png"
+          src="/assets/img/footer/logoCompleto.png"
           alt="Realtec logo"
           width={400}
           height={120}

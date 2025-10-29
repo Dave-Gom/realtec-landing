@@ -88,7 +88,7 @@ const Contact = () => {
       <div className="relative flex justify-center lg:justify-end w-full lg:w-auto">
         <div className="w-10 h-30 border-1 border-[#F4F7FA] mt-80 rounded-[30px] mr-[-15] z-1" />
         <Image
-          src="/assets/img/contact.jpg"
+          src="/assets/img/contact/contact.jpg"
           alt="Imagen de contacto"
           width={500}
           height={500}
