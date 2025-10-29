@@ -1,9 +1,15 @@
-import { Sora } from "next/font/google";
+import { Rubik, Sora } from "next/font/google";
 
 const sora = Sora({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-sora",
+});
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-rubik",
 });
 
 const Hero = () => {
@@ -27,13 +33,19 @@ const Hero = () => {
       {/* Overlay oscuro para mejorar contraste */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/10 z-10" />
 
-      <div className="relative z-20 text-center text-white">
+      <div className="relative z-20 text-center text-white h-[100vh] flex flex-col items-center justify-center">
         <h1
           className={`text-[36px] md:text-[60px] lg:text-[72px] font-bold mb-4 ${sora.className} drop-shadow-lg`}
         >
           Desarrollamos valor,
           <br /> crecemos juntos
         </h1>
+        <a
+          href={`#contact`}
+          className={`text-[#22AF52] mt-10 p-5 px-10 text-lg ${rubik.className} bg-[#22AF52] rounded-full text-white transition`}
+        >
+          CONTÁCTANOS
+        </a>
       </div>
     </section>
   );
