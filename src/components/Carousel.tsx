@@ -6,13 +6,12 @@ type CarouselProps<T extends object> = {
   data: Array<T>;
   renderItem: (item: T, index: number) => React.ReactNode;
   continuousScroll?: boolean;
-  fullViewItem?: boolean;
   gap?: Property.Gap;
   className?: HTMLAttributes<HTMLDivElement>["className"];
   contentContainerClassName?: HTMLAttributes<HTMLDivElement>["className"];
   containerProps?: React.HTMLAttributes<HTMLDivElement>;
   contenContainerProps?: React.HTMLAttributes<HTMLDivElement>;
-  showContentIndicators?: boolean;
+  tolerance?: number;
 };
 
 const Carousel = <T extends object>({
@@ -24,6 +23,7 @@ const Carousel = <T extends object>({
   containerProps,
   contenContainerProps,
   contentContainerClassName,
+  tolerance = 5,
 }: CarouselProps<T>) => {
   const scrollableRef = useRef<HTMLDivElement | null>(null);
   const [scrollValues, setScrollValues] = useState({
@@ -65,25 +65,50 @@ const Carousel = <T extends object>({
     );
   }, [data.length, continuousScroll, scrollValues]);
 
+  // ...existing code...
+  const getItemScrollAmount = () => {
+    const container = scrollableRef.current;
+    if (!container) return 0;
+
+    // Si todos los ítems tienen el mismo ancho, opción rápida:
+    // return container.scrollWidth / data.length;
+
+    // Para mayor precisión (ítems uniformes pero con gap):
+    const first = container.firstElementChild as HTMLElement | null;
+    if (!first) return container.clientWidth;
+
+    const itemWidth = first.getBoundingClientRect().width;
+    // Obtener gap real aplicado (columnGap en grid-flow-col)
+    const styles = getComputedStyle(container);
+    const gapX = parseFloat(styles.columnGap || styles.gap || "0") || 0;
+
+    return itemWidth + gapX;
+  };
+
   const goNext = () => {
-    if (scrollableRef.current) {
-      const scrollAmount = scrollableRef.current.clientWidth;
-      scrollableRef.current.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
-    }
+    const container = scrollableRef.current;
+    if (!container) return;
+
+    const scrollAmount = getItemScrollAmount();
+
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   const goPrev = () => {
-    if (scrollableRef.current) {
-      const scrollAmount = scrollableRef.current.clientWidth;
-      scrollableRef.current.scrollBy({
-        left: -scrollAmount,
-        behavior: "smooth",
-      });
-    }
+    const container = scrollableRef.current;
+    if (!container) return;
+
+    const scrollAmount = getItemScrollAmount();
+
+    container.scrollBy({
+      left: -scrollAmount,
+      behavior: "smooth",
+    });
   };
+  // ...existing code...
 
   return (
     <div
