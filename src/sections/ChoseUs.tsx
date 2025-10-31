@@ -37,14 +37,14 @@ const ChoseUs = () => {
         </div>
 
         {/* Derecha */}
-        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 h-auto flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem]">
+        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 h-auto flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem] ">
           <h3
-            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3`}
+            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
           >
             Respaldo con visión
           </h3>
           <p
-            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px]`}
+            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
           >
             Realtec surge con el respaldo de Tecnoedil, una constructora con más de 50 años de trayectoria. Convertimos esa experiencia en desarrollos inmobiliarios funcionales, sostenibles y de alto impacto.
           </p>
@@ -56,12 +56,12 @@ const ChoseUs = () => {
         {/* Izquierda */}
         <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem]">
           <h3
-            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3`}
+            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
           >
             Creemos en
           </h3>
           <p
-            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px]`}
+            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
           >
             Que el verdadero valor nace de proyectos con visión de largo plazo. Por eso, en Realtec impulsamos espacios industriales, corporativos y de uso mixto que acompañan el crecimiento del Paraguay.
           </p>
@@ -70,12 +70,12 @@ const ChoseUs = () => {
         {/* Derecha */}
         <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2  lg:h-[18rem]">
           <h3
-            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3`}
+            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
           >
             Nuestro Horizonte
           </h3>
           <p
-            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px]`}
+            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
           >
             Es consolidarnos como la desarrolladora de referencia en proyectos estratégicos que transformen el panorama empresarial y urbano a lo largo y ancho del Paraguay.
           </p>

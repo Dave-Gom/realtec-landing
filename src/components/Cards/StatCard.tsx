@@ -34,7 +34,7 @@ const StatCard = ({
         {...primaryTextProps}
         className={`${
           sora.className
-        } text-[32px] md:text-[48px] lg:text-[64px] font-semibold  sm:text-center  ${
+        } text-[32px] md:text-[4opx] lg:text-[40px] font-semibold  sm:text-center  ${
           primaryTextProps?.className ?? ""
         }`}
       >
