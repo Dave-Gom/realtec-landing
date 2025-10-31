@@ -90,7 +90,7 @@ const Contact = () => {
           {/* Línea izquierda */}
           <div className="absolute left-[-15px] bottom-[50] w-10 h-30 border-1 border-[#F4F7FA] rounded-[30px] z-1" />
           <Image
-            src="/assets/img/contact/contact.jpg"
+            src="/assets/img/contact/contact.png"
             alt="Introduction Image"
             width={500}
             height={500}

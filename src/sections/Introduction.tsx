@@ -46,7 +46,7 @@ const Introduction = () => {
           {/* Línea izquierda */}
           <div className="absolute left-[-15px] bottom-[50] w-10 h-30 border-1 border-[#22AF52] rounded-[30px] z-1" />
           <Image
-            src="/assets/img/intro/introImage.jpg"
+            src="/assets/img/intro/introImage.png"
             alt="Introduction Image"
             width={500}
             height={500}
