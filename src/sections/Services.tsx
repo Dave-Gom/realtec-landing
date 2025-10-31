@@ -66,9 +66,10 @@ const Services = () => {
         <div
           className="
             grid grid-cols-2 
+            md:grid-cols-4
             gap-6 sm:gap-10 
             mt-10 lg:mt-20 
-            w-full max-w-[900px] px-4
+            w-full  px-4
           "
         >
           {servicesList.map((service, index) => (
