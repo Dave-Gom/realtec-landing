@@ -49,9 +49,8 @@ const members: TeamMemberCardProps[] = [
   },
   {
     name: "Sarah Stadler",
-    position: "Asistente Técnico y Operativo",
-    description:
-      "Con visión integral, Sarah impulsa el crecimiento de Realtec articulando finanzas, desarrollo y gestión patrimonial. Su experiencia y enfoque relacional fortalecen nuestra propuesta de transformar activos en oportunidades rentables y fomentar una cultura de crecimiento compartido.",
+    position: "Trainee de Marketing",
+    description: "Sarah potencia la comunicación de Realtec y sus proyectos con creatividad y organización. Su entusiasmo por aprender, la observación de tendencias y el análisis de la competencia contribuyen a consolidar la estrategia de marketing de la empresa.",
     imageUrl: "/assets/img/teamRealtec/sarahStadler.jpg",
   },
 ];

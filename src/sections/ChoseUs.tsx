@@ -32,10 +32,7 @@ const ChoseUs = () => {
           <p
             className={`${redHatDisplay.className} text-[16px] sm:text-[18px] lg:text-[20px] font-light text-[#F4F7FA]`}
           >
-            Orientación centrada en el cliente, diseñamos soluciones que aportan
-            valor a largo plazo para inversores y usuarios. Cada proyecto
-            representa una nueva oportunidad de aprendizaje, innovación y
-            excelencia para nuestro equipo.
+            Porque creemos en nuestros proyectos y apostamos con vos: crecemos juntos. Con un equipo apasionado y comprometido, cada desarrollo nuestro se convierte en un espacio innovador y con propósito, pensado para sus usuarios finales.
           </p>
         </div>
 
@@ -44,17 +41,12 @@ const ChoseUs = () => {
           <h3
             className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3`}
           >
-            Respaldo que proyecta futuro
+            Respaldo con visión
           </h3>
           <p
             className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px]`}
           >
-            Realtec nace respaldado por la trayectoria de Tecnoedil, una
-            constructora con más de 50 años de experiencia en Paraguay. Su
-            dinamismo, capacidad técnica y responsabilidad en obras civiles,
-            viales, electromecánicas y portuarias nos otorgan la solidez
-            necesaria para proyectar una inmobiliaria a la altura de los mayores
-            estándares.
+            Realtec surge con el respaldo de Tecnoedil, una constructora con más de 50 años de trayectoria. Convertimos esa experiencia en desarrollos inmobiliarios funcionales, sostenibles y de alto impacto.
           </p>
         </div>
       </div>
@@ -71,11 +63,7 @@ const ChoseUs = () => {
           <p
             className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px]`}
           >
-            Que el verdadero crecimiento patrimonial nace de proyectos con
-            visión a largo plazo. Desarrollos que combinan lo industrial, lo
-            corporativo y lo mixto para impulsar la economía del Paraguay.
-            Nuestro objetivo es crear espacios que no solo se construyen, sino
-            que generan valor sostenible para las empresas y el país.
+            Que el verdadero valor nace de proyectos con visión de largo plazo. Por eso, en Realtec impulsamos espacios industriales, corporativos y de uso mixto que acompañan el crecimiento del Paraguay.
           </p>
         </div>
 
@@ -89,12 +77,7 @@ const ChoseUs = () => {
           <p
             className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px]`}
           >
-            Es consolidarnos como la desarrolladora de referencia en proyectos
-            estratégicos que transformen el panorama empresarial de Paraguay.
-            Acompañar a los inversionistas en la creación de oportunidades
-            sólidas, transparentes y rentables. Paraguay con infraestructura
-            moderna, sostenible y diseñada para crecer en conjunto con sus
-            protagonistas.
+            Es consolidarnos como la desarrolladora de referencia en proyectos estratégicos que transformen el panorama empresarial y urbano a lo largo y ancho del Paraguay.
           </p>
         </div>
       </div>

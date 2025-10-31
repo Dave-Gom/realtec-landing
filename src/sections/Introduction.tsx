@@ -21,23 +21,23 @@ const Introduction = () => {
         <h2
           className={`text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold mb-6 text-[#22AF52] ${sora.className}`}
         >
-          Impulsamos el desarrollo urbano que acompaña el crecimiento del país
+          Impulsamos el desarrollo inmobiliario que acompaña el crecimiento del Paraguay
         </h2>
         <p
           className={`${rubik.className} text-[#A8A8A8] text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed`}
         >
-          Realtec, la desarrolladora inmobiliaria del Grupo Tecnoedil, donde
-          impulsamos el desarrollo urbano que Paraguay necesita. <br />
+          Realtec es la desarrolladora del Grupo Tecnoedil, creada para transformar oportunidades en proyectos estratégicos con visión de largo plazo. <br />
           <br />
-          Desarrollamos proyectos industriales, corporativos y de uso mixto, con
-          la convicción de que el verdadero crecimiento se construye en espacios
-          funcionales, sostenibles y con visión a largo plazo.
+         Nos especializamos en desarrollos industriales, corporativos y de usos mixtos, con alcance e impacto nacional. En cada proyecto asumimos un compromiso real, alineando intereses y asegurando resultados que generan valor para los usuarios y para el país.
         </p>
-        <button
+        <div className="mt-8 sm:mt-10">
+        <a
+          href="#us"
           className={`${rubik.className} font-semibold text-white py-3 px-8 sm:px-10 md:px-12 rounded-[30px] bg-[#194230] text-[14px] sm:text-[16px] mt-8 sm:mt-10`}
         >
           Nuestro Equipo
-        </button>
+        </a>
+        </div>
       </div>
 
       {/* Imagen */}
