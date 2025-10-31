@@ -43,17 +43,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Overlay con texto */}
       <div
-        className={`absolute inset-0 bg-black/40 flex flex-col justify-between p-4 ${redHatDisplay.className} font-weight[800]`}
+        className={`absolute inset-0 bg-black/40 flex flex-col justify-end p-4 ${redHatDisplay.className} font-weight[800]`}
       >
-        <h3
+        <div>
+           <h3
           {...titleProps}
-          className={`text-white text-xl font-bold mt-[80%] ${
+          className={`text-white text-xl font-bold ${
             titleProps?.className ?? ""
           }`}
         >
           {title}
         </h3>
-        <div>
           <div className="flex items-center gap-2 mt-1">
             <MapPin size={16} className="text-green-400" />
             <p
