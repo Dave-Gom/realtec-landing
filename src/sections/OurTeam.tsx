@@ -70,7 +70,6 @@ const OurTeam = () => {
         contentContainerClassName="px-10 md:px-20 lg:px-40"
         data={members}
         gap={"1rem"}
-        continuousScroll
         renderItem={(member, index) => {
           return (
             <TeamMemberCard
