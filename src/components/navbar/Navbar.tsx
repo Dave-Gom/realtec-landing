@@ -1,8 +1,10 @@
 "use client";
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import { Menu, X } from "lucide-react";
 import { Rubik } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import LanguageSelector from "../LanguageSelector";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -12,11 +14,13 @@ const rubik = Rubik({
 
 const selectedBackground = "bg-[#22AF52] text-white rounded-full transition";
 const sections = ["hero", "projects", "us", "contact"];
-const labels = ["INICIO", "PROYECTOS", "NOSOTROS", "CONTÁCTANOS"];
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const labels = [t.navbar.inicio, t.navbar.proyectos, t.navbar.nosotros, t.navbar.contactanos];
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -68,18 +72,21 @@ const Navbar = () => {
       </button>
 
       {/* Menú en pantallas grandes */}
-      <div className="hidden md:flex items-center gap-2">
-        {sections.map((id, index) => (
-          <a
-            key={id}
-            href={`#${id}`}
-            className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className} ${
-              active === id ? selectedBackground : ""
-            } hover:bg-[#22AF52] hover:rounded-full hover:text-white`}
-          >
-            {labels[index]}
-          </a>
-        ))}
+      <div className="hidden md:flex items-center gap-4">
+        <div className="flex items-center gap-2">
+          {sections.map((id, index) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={`mr-2 text-[#22AF52] p-3 px-5 ${rubik.className} ${
+                active === id ? selectedBackground : ""
+              } hover:bg-[#22AF52] hover:rounded-full hover:text-white`}
+            >
+              {labels[index]}
+            </a>
+          ))}
+        </div>
+        <LanguageSelector />
       </div>
 
       {/* Menú colapsable móvil */}
@@ -100,6 +107,9 @@ const Navbar = () => {
                 {labels[index]}
               </a>
             ))}
+            <div className="mt-4">
+              <LanguageSelector />
+            </div>
           </div>
         </div>
       )}

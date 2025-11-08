@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import { Red_Hat_Display, Sora } from "next/font/google";
 
 const sora = Sora({
@@ -15,6 +16,8 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 const ChoseUs = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       id="chose-us"
@@ -27,12 +30,12 @@ const ChoseUs = () => {
           <h2
             className={`${sora.className} font-semibold text-[32px] sm:text-[40px] lg:text-[55px] text-[#F4F7FA] leading-tight mb-4`}
           >
-            ¿Por qué invertir con Realtec?
+            {t.choseUs.title}
           </h2>
           <p
             className={`${redHatDisplay.className} text-[16px] sm:text-[18px] lg:text-[20px] font-light text-[#F4F7FA]`}
           >
-            Porque creemos en nuestros proyectos y apostamos con vos: crecemos juntos. Con un equipo apasionado y comprometido, cada desarrollo nuestro se convierte en un espacio innovador y con propósito, pensado para sus usuarios finales.
+            {t.choseUs.description}
           </p>
         </div>
 
@@ -41,12 +44,12 @@ const ChoseUs = () => {
           <h3
             className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
           >
-            Respaldo con visión
+            {t.choseUs.cards.backup.title}
           </h3>
           <p
             className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
           >
-            Realtec surge con el respaldo de Tecnoedil, una constructora con más de 50 años de trayectoria. Convertimos esa experiencia en desarrollos inmobiliarios funcionales, sostenibles y de alto impacto.
+            {t.choseUs.cards.backup.description}
           </p>
         </div>
       </div>
@@ -58,12 +61,12 @@ const ChoseUs = () => {
           <h3
             className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
           >
-            Creemos en
+            {t.choseUs.cards.believe.title}
           </h3>
           <p
             className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
           >
-            Que el verdadero valor nace de proyectos con visión de largo plazo. Por eso, en Realtec impulsamos espacios industriales, corporativos y de uso mixto que acompañan el crecimiento del Paraguay.
+            {t.choseUs.cards.believe.description}
           </p>
         </div>
 
@@ -72,12 +75,12 @@ const ChoseUs = () => {
           <h3
             className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
           >
-            Nuestro Horizonte
+            {t.choseUs.cards.horizon.title}
           </h3>
           <p
             className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
           >
-            Es consolidarnos como la desarrolladora de referencia en proyectos estratégicos que transformen el panorama empresarial y urbano a lo largo y ancho del Paraguay.
+            {t.choseUs.cards.horizon.description}
           </p>
         </div>
       </div>

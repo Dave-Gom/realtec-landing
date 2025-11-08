@@ -1,4 +1,5 @@
 "use client";
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import { Mail, MessageSquare, User } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -8,6 +9,7 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const { t } = useLanguage();
 
   const handleSendEmail = () => {
     const subject = encodeURIComponent(`Consulta de ${name}`);
@@ -28,12 +30,12 @@ const Contact = () => {
           <h2
             className={`text-[32px] sm:text-[40px] lg:text-[48px] font-semibold text-white ${sora.className}`}
           >
-            Contactanos
+            {t.contact.title}
           </h2>
 
           {/* Nombre */}
           <label className="w-full flex flex-col gap-2 text-left">
-            <span className="text-white text-lg">Nombre</span>
+            <span className="text-white text-lg">{t.contact.form.name.label}</span>
             <div className="relative">
               <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#ACB4C3] w-5 h-5" />
               <input
@@ -41,14 +43,14 @@ const Contact = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className={`w-full pl-12 pr-3 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white bg-[#E7EAEE] text-[#333] placeholder:text-[#ACB4C3] ${inter.className}`}
-                placeholder="Nombre y Apellido"
+                placeholder={t.contact.form.name.placeholder}
               />
             </div>
           </label>
 
           {/* Email */}
           <label className="w-full flex flex-col gap-2 text-left">
-            <span className="text-white text-lg">Email</span>
+            <span className="text-white text-lg">{t.contact.form.email.label}</span>
             <div className="relative">
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#ACB4C3] w-5 h-5" />
               <input
@@ -56,21 +58,21 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={`w-full pl-12 pr-3 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white bg-[#E7EAEE] text-[#333] placeholder:text-[#ACB4C3] ${inter.className}`}
-                placeholder="Ingresa tu email"
+                placeholder={t.contact.form.email.placeholder}
               />
             </div>
           </label>
 
           {/* Mensaje */}
           <label className="w-full flex flex-col gap-2 text-left">
-            <span className="text-white text-lg">Mensaje</span>
+            <span className="text-white text-lg">{t.contact.form.message.label}</span>
             <div className="relative">
               <MessageSquare className="absolute left-3 top-4 text-[#ACB4C3] w-5 h-5" />
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 className={`w-full pl-12 pr-3 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white bg-[#E7EAEE] text-[#333] placeholder:text-[#ACB4C3] ${inter.className}`}
-                placeholder="Escribe tu mensaje"
+                placeholder={t.contact.form.message.placeholder}
                 rows={4}
               ></textarea>
             </div>
@@ -81,7 +83,7 @@ const Contact = () => {
             onClick={handleSendEmail}
             className="bg-white text-[#22AF52] font-semibold px-6 py-3 rounded-[88px] hover:bg-gray-200 transition"
           >
-            Enviar consulta
+            {t.contact.form.submitButton}
           </button>
         </div>
       </div>

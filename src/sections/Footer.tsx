@@ -1,7 +1,12 @@
+"use client";
+
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import Image from "next/image";
 import { sora } from "../theme/fonts";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer
       id="footer"
@@ -72,7 +77,7 @@ const Footer = () => {
       <p
         className={`${sora.className} text-center text-[#22AF52] text-[14px] sm:text-[16px] font-semibold`}
       >
-        © 2025. Studio M. All rights reserved.
+        {t.footer.copyright}
       </p>
     </footer>
   );

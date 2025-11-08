@@ -1,5 +1,7 @@
 "use client";
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import { Sora } from "next/font/google";
+import { useMemo } from "react";
 import TeamMemberCard, {
   TeamMemberCardProps,
 } from "../components/Cards/TeamMemberCard";
@@ -11,51 +13,51 @@ const sora = Sora({
   variable: "--font-sora",
 });
 
-const members: TeamMemberCardProps[] = [
-  {
-    name: "Alvaro Acevedo",
-    position: "Gerente de Negocios Inmobiliarios",
-    imageUrl: "/assets/img/teamRealtec/alvaroAcevedo.jpg",
-    description:
-      "Con visión integral, Alvaro impulsa el crecimiento de Realtec articulando finanzas, desarrollo y gestión patrimonial. Su experiencia y enfoque relacional fortalecen nuestra propuesta de transformar activos en oportunidades rentables y fomentar una cultura de crecimiento compartido.",
-  },
-  {
-    name: "Juan Pablo Troche",
-    position: "Coordinador de Proyectos",
-    imageUrl: "/assets/img/teamRealtec/pabloTroche.jpg",
-    description:
-      "Ingeniero Civil con Máster en Desarrollo Inmobiliario por IE University. Juan lidera la ejecución de nuestros proyectos industriales, asegurando que cada desarrollo sea técnicamente sólido, financieramente viable y estratégicamente rentable.",
-  },
-  {
-    name: "Lucas Acosta",
-    position: "Coordinador de Proyectos",
-    description:
-      "Lucas lidera el desarrollo de proyectos corporativos y de usos mixtos, desde la concepción hasta la comercialización y administración. Ingeniero industrial con enfoque estratégico, aporta capacidad para estructurar procesos y tecnología que aseguran eficiencia operativa.",
-    imageUrl: "/assets/img/teamRealtec/lucasAcosta.jpg",
-  },
-  {
-    name: "Ismael Luizzi",
-    position: "Asistente Técnico y Operativo",
-    description:
-      "Ingeniero industrial con enfoque en gestión patrimonial y análisis de desarrollos. Con su capacidad analítica y de organización, Ismael asegura que cada activo esté listo para generar valor, ya sea a través de su comercialización o desarrollo.",
-    imageUrl: "/assets/img/teamRealtec/isamaelLuizzi.jpg",
-  },
-  {
-    name: "Matias Viveros",
-    position: "Administración y Contabilidad",
-    description:
-      "Contador público con experiencia en gestión financiera y administrativa. \nMatías asegura el control contable y la agilidad operativa de Realtec, aportando el rigor necesario para la gestión presupuestaria de los proyectos inmobiliarios.",
-    imageUrl: "/assets/img/teamRealtec/matiasViveros.jpg",
-  },
-  {
-    name: "Sarah Stadler",
-    position: "Trainee de Marketing",
-    description: "Sarah potencia la comunicación de Realtec y sus proyectos con creatividad y organización. Su entusiasmo por aprender, la observación de tendencias y el análisis de la competencia contribuyen a consolidar la estrategia de marketing de la empresa.",
-    imageUrl: "/assets/img/teamRealtec/sarahStadler.jpg",
-  },
-];
-
 const OurTeam = () => {
+  const { t } = useLanguage();
+
+  const members: TeamMemberCardProps[] = useMemo(
+    () => [
+      {
+        name: t.ourTeam.members.alvaroAcevedo.name,
+        position: t.ourTeam.members.alvaroAcevedo.position,
+        imageUrl: "/assets/img/teamRealtec/alvaroAcevedo.jpg",
+        description: t.ourTeam.members.alvaroAcevedo.description,
+      },
+      {
+        name: t.ourTeam.members.juanPabloTroche.name,
+        position: t.ourTeam.members.juanPabloTroche.position,
+        imageUrl: "/assets/img/teamRealtec/pabloTroche.jpg",
+        description: t.ourTeam.members.juanPabloTroche.description,
+      },
+      {
+        name: t.ourTeam.members.lucasAcosta.name,
+        position: t.ourTeam.members.lucasAcosta.position,
+        description: t.ourTeam.members.lucasAcosta.description,
+        imageUrl: "/assets/img/teamRealtec/lucasAcosta.jpg",
+      },
+      {
+        name: t.ourTeam.members.ismaelLuizzi.name,
+        position: t.ourTeam.members.ismaelLuizzi.position,
+        description: t.ourTeam.members.ismaelLuizzi.description,
+        imageUrl: "/assets/img/teamRealtec/isamaelLuizzi.jpg",
+      },
+      {
+        name: t.ourTeam.members.matiasViveros.name,
+        position: t.ourTeam.members.matiasViveros.position,
+        description: t.ourTeam.members.matiasViveros.description,
+        imageUrl: "/assets/img/teamRealtec/matiasViveros.jpg",
+      },
+      {
+        name: t.ourTeam.members.sarahStadler.name,
+        position: t.ourTeam.members.sarahStadler.position,
+        description: t.ourTeam.members.sarahStadler.description,
+        imageUrl: "/assets/img/teamRealtec/sarahStadler.jpg",
+      },
+    ],
+    [t]
+  );
+
   return (
     <section
       className=" py-10 w-full min-h-[80vh] bg-white flex flex-col align-middle overflow-hidden scroll-mt-[10vh]"
@@ -64,7 +66,7 @@ const OurTeam = () => {
       <h2
         className={`${sora.className} text-[48px] font-semibold text-center text-[#22AF52] mb-6`}
       >
-        Team Realtec
+        {t.ourTeam.title}
       </h2>
       <Carousel
         contentContainerClassName="px-10 md:px-20 lg:px-40"

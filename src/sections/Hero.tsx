@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import { Rubik, Sora } from "next/font/google";
 
 const sora = Sora({
@@ -13,6 +16,8 @@ const rubik = Rubik({
 });
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       className="relative h-screen w-screen flex items-center justify-center overflow-hidden"
@@ -27,7 +32,7 @@ const Hero = () => {
         muted
         playsInline
       >
-        Your browser does not support the video tag.
+        {t.common.videoNotSupported}
       </video>
 
       {/* Overlay oscuro para mejorar contraste */}
@@ -37,14 +42,14 @@ const Hero = () => {
         <h1
           className={`text-[36px] md:text-[60px] lg:text-[72px] font-bold mb-4 ${sora.className} drop-shadow-lg`}
         >
-          Desarrollamos valor,
-          <br /> crecemos juntos
+          {t.hero.title}
+          <br /> {t.hero.subtitle}
         </h1>
         <a
           href={`#contact`}
           className={`text-[#22AF52] mt-10 p-5 px-10 text-lg ${rubik.className} bg-[#22AF52] rounded-full text-white transition`}
         >
-          CONTÁCTANOS
+          {t.hero.ctaButton}
         </a>
       </div>
     </section>

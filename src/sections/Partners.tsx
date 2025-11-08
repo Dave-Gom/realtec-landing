@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import { Sora } from "next/font/google";
 
 const sora = Sora({
@@ -7,6 +10,8 @@ const sora = Sora({
 });
 
 const Partners = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       id="partners"
@@ -15,7 +20,7 @@ const Partners = () => {
       <h2
         className={`${sora.className} text-[28px] sm:text-[36px] lg:text-[48px] font-semibold text-center text-[#22AF52] mb-6 sm:mb-10`}
       >
-        Crecemos juntos
+        {t.partners.title}
       </h2>
 
       <div

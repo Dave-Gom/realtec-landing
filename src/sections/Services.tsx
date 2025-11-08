@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/src/traductions/LanguageContext";
 import { Sora } from "next/font/google";
 import IconCard, { IconCardProps } from "../components/Cards/IconCard";
 
@@ -7,26 +10,28 @@ const sora = Sora({
   variable: "--font-sora",
 });
 
-const servicesList: IconCardProps[] = [
-  {
-    iconUrl: "/assets/img/icons/transformacion.png",
-    title: "Transformación con Valor",
-  },
-  {
-    iconUrl: "/assets/img/icons/estrategia.png",
-    title: "Estrategia Integral",
-  },
-  {
-    iconUrl: "/assets/img/icons/ejecucion.png",
-    title: "Ejecución Profesional",
-  },
-  {
-    iconUrl: "/assets/img/icons/diferenciacion.png",
-    title: "Diferenciación Real",
-  },
-];
-
 const Services = () => {
+  const { t } = useLanguage();
+
+  const servicesList: IconCardProps[] = [
+    {
+      iconUrl: "/assets/img/icons/transformacion.png",
+      title: t.services.cards.transformation,
+    },
+    {
+      iconUrl: "/assets/img/icons/estrategia.png",
+      title: t.services.cards.strategy,
+    },
+    {
+      iconUrl: "/assets/img/icons/ejecucion.png",
+      title: t.services.cards.execution,
+    },
+    {
+      iconUrl: "/assets/img/icons/diferenciacion.png",
+      title: t.services.cards.differentiation,
+    },
+  ];
+
   return (
     <section
       id="hero"
@@ -41,7 +46,7 @@ const Services = () => {
         muted
         playsInline
       >
-        Your browser does not support the video tag.
+        {t.common.videoNotSupported}
       </video>
 
       {/* Overlay oscuro */}
@@ -52,14 +57,13 @@ const Services = () => {
         <h2
           className={`${sora.className} font-semibold text-[28px] sm:text-[36px] lg:text-[48px] mb-4`}
         >
-          Gestión de Desarrollos Inmobiliarios
+          {t.services.title}
         </h2>
 
         <p
           className={`${sora.className} font-light text-[16px] sm:text-[20px] lg:text-[28px] text-[#F4F7FA] max-w-[900px] mx-auto`}
         >
-          Transformamos oportunidades en proyectos rentables, con estrategia,
-          foco y visión.
+          {t.services.subtitle}
         </p>
 
         {/* Cuadrícula de IconCards */}
