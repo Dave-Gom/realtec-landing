@@ -19,7 +19,7 @@ const projects = [
   {
     imageUrl: "/assets/img/projects/mixedUse.png",
     title: "Proyecto De Usos Mixtos",
-    location: "Ciudad de Limpio",
+    location: "Concepción",
     status: "En Desarrollo",
   },
 ];

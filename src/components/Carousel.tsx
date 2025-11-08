@@ -11,7 +11,6 @@ type CarouselProps<T extends object> = {
   contentContainerClassName?: HTMLAttributes<HTMLDivElement>["className"];
   containerProps?: React.HTMLAttributes<HTMLDivElement>;
   contenContainerProps?: React.HTMLAttributes<HTMLDivElement>;
-  tolerance?: number;
 };
 
 const Carousel = <T extends object>({
@@ -23,7 +22,6 @@ const Carousel = <T extends object>({
   containerProps,
   contenContainerProps,
   contentContainerClassName,
-  tolerance = 5,
 }: CarouselProps<T>) => {
   const scrollableRef = useRef<HTMLDivElement | null>(null);
   const [scrollValues, setScrollValues] = useState({
@@ -31,6 +29,12 @@ const Carousel = <T extends object>({
     scrollWidth: 0,
     clientWidth: 0,
   });
+  const [showRightButton, setShowRightButton] = useState(false)
+
+  const handleWindowResize = () => {
+   const width = window.innerWidth;
+   setShowRightButton(data.length > 2 && width <1200)
+  }
 
   useEffect(() => {
     const scrollable = scrollableRef.current;
@@ -47,14 +51,20 @@ const Carousel = <T extends object>({
     updateScrollValues();
 
     scrollableRef.current?.addEventListener("scroll", updateScrollValues);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      scrollableRef.current?.removeEventListener("scroll", updateScrollValues);
+      window.removeEventListener("resize", handleWindowResize);
+    };
   }, []);
 
   const showLeftButton = useMemo(() => {
     return data.length > 1 && !continuousScroll && scrollValues.scrollLeft > 0;
   }, [data.length, continuousScroll, scrollValues]);
 
-  const showRightButton = useMemo(() => {
-    return (
+  useEffect(() => {
+    setShowRightButton(
       data.length > 1 &&
       !continuousScroll &&
       scrollValues.scrollWidth > scrollValues.clientWidth &&

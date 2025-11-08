@@ -32,6 +32,7 @@ const Partners = () => {
             hover:scale-105
             max-h-[60px] sm:max-h-[80px] lg:max-h-[100px]
             w-auto
+            max-w-[350px]
           "
         />
         <img
@@ -42,6 +43,7 @@ const Partners = () => {
             hover:scale-105
             max-h-[60px] sm:max-h-[80px] lg:max-h-[100px]
             w-auto
+            max-w-[350px]
           "
         />
         <img
@@ -52,6 +54,7 @@ const Partners = () => {
             hover:scale-105
             max-h-[60px] sm:max-h-[80px] lg:max-h-[100px]
             w-auto
+            max-w-[350px]
           "
         />
       </div>
