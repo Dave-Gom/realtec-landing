@@ -40,14 +40,14 @@ const ChoseUs = () => {
         </div>
 
         {/* Derecha */}
-        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 h-auto flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem] ">
+        <div className="bg-white hover:bg-[#22AF52] text-left rounded-3xl p-6 sm:p-8 lg:px-20 h-auto flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem] transition-colors duration-300 group cursor-pointer">
           <h3
-            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
+            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] group-hover:text-white mb-3 text-center transition-colors duration-300`}
           >
             {t.choseUs.cards.backup.title}
           </h3>
           <p
-            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
+            className={`${redHatDisplay.className} text-[#949494] group-hover:text-white text-[14px] sm:text-[15px] lg:text-[16px] text-center transition-colors duration-300`}
           >
             {t.choseUs.cards.backup.description}
           </p>
@@ -57,28 +57,28 @@ const ChoseUs = () => {
       {/* Segunda fila */}
       <div className="flex flex-col lg:flex-row items-center text-white gap-6 lg:gap-8 w-full max-w-[1300px]">
         {/* Izquierda */}
-        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem]">
+        <div className="bg-white hover:bg-[#22AF52] text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem] transition-colors duration-300 group cursor-pointer">
           <h3
-            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
+            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] group-hover:text-white mb-3 text-center transition-colors duration-300`}
           >
             {t.choseUs.cards.believe.title}
           </h3>
           <p
-            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
+            className={`${redHatDisplay.className} text-[#949494] group-hover:text-white text-[14px] sm:text-[15px] lg:text-[16px] text-center transition-colors duration-300`}
           >
             {t.choseUs.cards.believe.description}
           </p>
         </div>
 
         {/* Derecha */}
-        <div className="bg-white text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2  lg:h-[18rem]">
+        <div className="bg-white hover:bg-[#22AF52] text-left rounded-3xl p-6 sm:p-8 lg:px-20 flex flex-col justify-center w-full lg:w-1/2 lg:h-[18rem] transition-colors duration-300 group cursor-pointer">
           <h3
-            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] mb-3 text-center`}
+            className={`${sora.className} font-semibold text-[24px] sm:text-[28px] lg:text-[35px] text-[#22AF52] group-hover:text-white mb-3 text-center transition-colors duration-300`}
           >
             {t.choseUs.cards.horizon.title}
           </h3>
           <p
-            className={`${redHatDisplay.className} text-[#949494] text-[14px] sm:text-[15px] lg:text-[16px] text-center`}
+            className={`${redHatDisplay.className} text-[#949494] group-hover:text-white text-[14px] sm:text-[15px] lg:text-[16px] text-center transition-colors duration-300`}
           >
             {t.choseUs.cards.horizon.description}
           </p>
