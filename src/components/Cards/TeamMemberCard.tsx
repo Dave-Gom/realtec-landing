@@ -41,11 +41,11 @@ const TeamMemberCard = ({
         className="w-[50vw] h-[50vw] max-w-[313px] max-h-[280px] object-cover rounded-[12px] transition-transform duration-300 hover:scale-105 mx-auto"
       />
       <h3
-        className={`${sora.className} text-[20px] sm:text-[22px] lg:text-[24px] text-[#07090D] mt-4`}
+        className={`${sora.className} text-[20px] sm:text-[22px] lg:text-[24px] text-[#07090D] mt-4 w-full text-start`}
       >
         {name}
       </h3>
-      <div className="border-b border-[#22AF52] w-1/2 mb-2" />
+      <div className="border-b border-[#22AF52] w-full mb-2" />
       <div>
         <h5
           className={`${inter.className} text-[14px] sm:text-[15px] lg:text-[16px] text-[#22AF52] mb-4 text-start justify-self-start`}
