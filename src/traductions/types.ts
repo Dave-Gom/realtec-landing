@@ -73,7 +73,7 @@ export interface Translations {
         position: string;
         description: string;
       };
-      juanPabloTroche: {
+      sebastianKunzle: {
         name: string;
         position: string;
         description: string;

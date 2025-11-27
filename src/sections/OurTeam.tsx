@@ -25,10 +25,10 @@ const OurTeam = () => {
         description: t.ourTeam.members.alvaroAcevedo.description,
       },
       {
-        name: t.ourTeam.members.juanPabloTroche.name,
-        position: t.ourTeam.members.juanPabloTroche.position,
-        imageUrl: "/assets/img/teamRealtec/pabloTroche.jpg",
-        description: t.ourTeam.members.juanPabloTroche.description,
+        name: t.ourTeam.members.sebastianKunzle.name,
+        position: t.ourTeam.members.sebastianKunzle.position,
+        imageUrl: "/assets/img/teamRealtec/sebastianKunzle.jpg",
+        description: t.ourTeam.members.sebastianKunzle.description,
       },
       {
         name: t.ourTeam.members.lucasAcosta.name,
